@@ -4,12 +4,33 @@ import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
 import { Playlist } from "../data/playlist"
+import AudioPlayer from "./music-player"
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> {
   playlists: Playlist[]
 }
 
 export function Sidebar({ className, playlists }: SidebarProps) {
+  const tracks = [
+    {
+      url: 'https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3',
+      title: 'Madza - Chords of Life',
+      tags: ['house'],
+      albumArt: 'https://images.unsplash.com/photo-1490300472339-79e4adc6be4a?w=300&dpr=2&q=80', // Add the album art URL here
+    },
+    {
+      url: 'https://audioplayer.madza.dev/Madza-Late_Night_Drive.mp3',
+      title: 'Madza - Late Night Drive',
+      tags: ['dnb'],
+      albumArt: 'https://images.unsplash.com/photo-1468817814611-b7edf94b5d60?w=300&dpr=2&q=80', // Add the album art URL here
+    },
+    {
+      url: 'https://audioplayer.madza.dev/Madza-Persistence.mp3',
+      title: 'Madza - Persistence',
+      tags: ['dubstep'],
+      albumArt: 'https://images.unsplash.com/photo-1446185250204-f94591f7d702?w=300&dpr=2&q=80', // Add the album art URL here
+    },
+  ];
   return (
     <div className={cn("pb-12", className)}>
       <div className="space-y-4 py-4">
@@ -111,7 +132,9 @@ export function Sidebar({ className, playlists }: SidebarProps) {
           <h2 className="mb-2 px-4 text-lg font-semibold tracking-tight">
             Player
           </h2>
-          <div className="space-y-1"></div>
+          <div className="space-y-1">
+            <AudioPlayer tracks={tracks}/>
+          </div>
         </div>
       </div>
     </div>

@@ -57,7 +57,7 @@ export default function MusicPage() {
                         <TabsTrigger value="music" className="relative">
                           Music
                         </TabsTrigger>
-                        <TabsTrigger value="podcasts">Podcasts</TabsTrigger>
+                        <TabsTrigger value="podcasts">Stream Now</TabsTrigger>
                         {/* <TabsTrigger value="live" disabled>
                           Live
                         </TabsTrigger> */}

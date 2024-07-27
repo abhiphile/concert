@@ -14,7 +14,7 @@ import {
 
 import { AlbumArtwork } from "../components/album-artwork"
 import { Menu } from "../components/menu"
-import { PodcastEmptyPlaceholder } from "../components/stream-music"
+import { StreamMusic } from "../components/stream-music"
 import { Sidebar } from "../components/sidebar"
 import { listenNowAlbums, madeForYouAlbums } from "../data/album"
 import { playlists } from "../data/playlist"
@@ -144,7 +144,7 @@ export default function MusicPage() {
                         </div>
                       </div>
                       <Separator className="my-4" />
-                      <PodcastEmptyPlaceholder />
+                      <StreamMusic />
                     </TabsContent>
                   </Tabs>
                 </div>

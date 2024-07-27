@@ -57,10 +57,7 @@ export default function MusicPage() {
                         <TabsTrigger value="music" className="relative">
                           Music
                         </TabsTrigger>
-                        <TabsTrigger value="podcasts">Stream Now</TabsTrigger>
-                        {/* <TabsTrigger value="live" disabled>
-                          Live
-                        </TabsTrigger> */}
+                        <TabsTrigger value="stream">Stream Now</TabsTrigger>
                       </TabsList>
                       <div className="ml-auto mr-4">
                         <Button>
@@ -129,18 +126,17 @@ export default function MusicPage() {
                       </div>
                     </TabsContent>
                     <TabsContent
-                      value="podcasts"
+                      value="stream"
                       className="h-full flex-col border-none p-0 data-[state=active]:flex"
                     >
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
-                          {/* <h2 className="text-2xl font-semibold tracking-tight">
-                            New Episodes
+                          <h2 className="text-2xl font-semibold tracking-tight">
+                            Steam your songs all around the world.
                           </h2>
                           <p className="text-sm text-muted-foreground">
-                            Your favorite podcasts. Updated daily.
-                          </p> */}
-                          
+                            Share your Streaming ID to your friends.
+                          </p>
                         </div>
                       </div>
                       <Separator className="my-4" />

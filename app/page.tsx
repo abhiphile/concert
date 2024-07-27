@@ -58,9 +58,9 @@ export default function MusicPage() {
                           Music
                         </TabsTrigger>
                         <TabsTrigger value="podcasts">Podcasts</TabsTrigger>
-                        <TabsTrigger value="live" disabled>
+                        {/* <TabsTrigger value="live" disabled>
                           Live
-                        </TabsTrigger>
+                        </TabsTrigger> */}
                       </TabsList>
                       <div className="ml-auto mr-4">
                         <Button>
@@ -134,12 +134,13 @@ export default function MusicPage() {
                     >
                       <div className="flex items-center justify-between">
                         <div className="space-y-1">
-                          <h2 className="text-2xl font-semibold tracking-tight">
+                          {/* <h2 className="text-2xl font-semibold tracking-tight">
                             New Episodes
                           </h2>
                           <p className="text-sm text-muted-foreground">
                             Your favorite podcasts. Updated daily.
-                          </p>
+                          </p> */}
+                          
                         </div>
                       </div>
                       <Separator className="my-4" />

@@ -195,6 +195,7 @@ import {
             <MenubarItem inset>Add Account...</MenubarItem>
           </MenubarContent>
         </MenubarMenu>
+
       </Menubar>
     )
   }

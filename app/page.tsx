@@ -14,7 +14,7 @@ import {
 
 import { AlbumArtwork } from "../components/album-artwork"
 import { Menu } from "../components/menu"
-import { PodcastEmptyPlaceholder } from "../components/podcast-empty-placeholder"
+import { PodcastEmptyPlaceholder } from "../components/stream-music"
 import { Sidebar } from "../components/sidebar"
 import { listenNowAlbums, madeForYouAlbums } from "../data/album"
 import { playlists } from "../data/playlist"

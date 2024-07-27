@@ -67,8 +67,6 @@ const config = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
           "caret-blink": {
-            "0%,70%,100%": { opacity: "1" },
-            "20%,50%": { opacity: "0" },
           },
         },
         "accordion-up": {

@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import Link from 'next/link'; // Ensure you have next/link installed for client-side navigation
 import {
@@ -18,16 +19,12 @@ import {
 } from "@/components/ui/menubar";
 
 export function Menu() {
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false); // Replace with actual authentication state
-
-  const handleLogin = () => {
-    // Implement your login logic here
-    setIsAuthenticated(true);
-  };
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Update this state based on your authentication logic
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = () => {
-    // Implement your logout logic here
-    setIsAuthenticated(false);
+    // Handle logout logic here
+    setIsAuthenticated(false); // Update this state based on your logout logic
   };
 
   return (
@@ -197,25 +194,43 @@ export function Menu() {
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
-        <MenubarTrigger className="hidden md:block">Account</MenubarTrigger>
-        <MenubarContent forceMount>
-          {!isAuthenticated ? (
-            <>
-              <MenubarItem>
-                <Link href='/signin'>Sign In</Link>
-              </MenubarItem>
-              <MenubarItem>
-                <Link href='/signup'>Sign Up</Link>
-              </MenubarItem>
-            </>
-          ) : (
-            <>
-              <MenubarItem>
-                <button onClick={handleLogout}>Log Out</button>
-              </MenubarItem>
-            </>
-          )}
-        </MenubarContent>
+          <MenubarTrigger className="hidden md:block">Account</MenubarTrigger>
+          <MenubarContent forceMount>
+            <MenubarLabel inset>Switch Account</MenubarLabel>
+            <MenubarSeparator />
+            <MenubarRadioGroup value="benoit">
+              <MenubarRadioItem value="andy">Andy</MenubarRadioItem>
+              <MenubarRadioItem value="benoit">Benoit</MenubarRadioItem>
+              <MenubarRadioItem value="Luis">Luis</MenubarRadioItem>
+            </MenubarRadioGroup>
+            <MenubarSeparator />
+            <MenubarItem inset>Manage Family...</MenubarItem>
+            <MenubarSeparator />
+            <MenubarItem inset>Add Account...</MenubarItem>
+          </MenubarContent>
+        </MenubarMenu>
+        <MenubarMenu>
+       
+        <Link href="/signin" passHref>
+          <MenubarTrigger className="hidden md:block cursor-pointer">
+            Sign In
+          </MenubarTrigger>
+        </Link>
+        
+      
+      </MenubarMenu>
+        <MenubarMenu>
+       
+        <Link href="/signup" passHref>
+          <MenubarTrigger className="hidden md:block cursor-pointer">
+            Sign Up
+          </MenubarTrigger>
+        </Link>
+          
+     
+
+        
+      
       </MenubarMenu>
     </Menubar>
   );

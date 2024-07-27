@@ -38,15 +38,6 @@ export function Menu() {
             Preferences... <MenubarShortcut>⌘,</MenubarShortcut>
           </MenubarItem>
           <MenubarSeparator />
-          <MenubarItem>
-            Hide Music... <MenubarShortcut>⌘H</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            Hide Others... <MenubarShortcut>⇧⌘H</MenubarShortcut>
-          </MenubarItem>
-          <MenubarItem>
-            Quit Music <MenubarShortcut>⌘Q</MenubarShortcut>
-          </MenubarItem>
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>

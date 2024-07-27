@@ -58,9 +58,6 @@ export default function MusicPage() {
                           Music
                         </TabsTrigger>
                         <TabsTrigger value="stream">Stream Now</TabsTrigger>
-                        {/* <TabsTrigger value="live" disabled>
-                          Live
-                        </TabsTrigger> */}
                       </TabsList>
                       <div className="ml-auto mr-4">
                         <Button>

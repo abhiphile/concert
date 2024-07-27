@@ -13,8 +13,8 @@ import {
 } from "@/components/ui/tabs"
 
 import { AlbumArtwork } from "../components/album-artwork"
-import { Menu } from "../components/podcast-empty-placeholder"
-import { PodcastEmptyPlaceholder } from "../components/menu"
+import { Menu } from "../components/menu"
+import { PodcastEmptyPlaceholder } from "../components/podcast-empty-placeholder"
 import { Sidebar } from "../components/sidebar"
 import { listenNowAlbums, madeForYouAlbums } from "../data/album"
 import { playlists } from "../data/playlist"
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description: "Example music app using the components.",
 }
 
-export default function Home() {
+export default function MusicPage() {
   return (
     <>
       <div className="md:hidden">

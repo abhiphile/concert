@@ -18,6 +18,7 @@ import { StreamMusic } from "../components/stream-music"
 import { Sidebar } from "../components/sidebar"
 import { listenNowAlbums, madeForYouAlbums } from "../data/album"
 import { playlists } from "../data/playlist"
+import { JoinRoom } from "@/components/join-room"
 
 export const metadata: Metadata = {
   title: "Music App",
@@ -54,13 +55,9 @@ export default function MusicPage() {
                   <Tabs defaultValue="music" className="h-full space-y-6">
                     <div className="space-between flex items-center">
                       <TabsList>
-                        <TabsTrigger value="music" className="relative">
-                          Music
-                        </TabsTrigger>
+                        <TabsTrigger value="music" className="relative">Music</TabsTrigger>
                         <TabsTrigger value="stream">Stream Now</TabsTrigger>
-                        {/* <TabsTrigger value="live" disabled>
-                          Live
-                        </TabsTrigger> */}
+                        <TabsTrigger value="join-room">Join Room</TabsTrigger>
                       </TabsList>
                       <div className="ml-auto mr-4">
                         <Button>
@@ -144,6 +141,23 @@ export default function MusicPage() {
                       </div>
                       <Separator className="my-4" />
                       <StreamMusic />
+                    </TabsContent>
+                    <TabsContent
+                      value="join-room"
+                      className="h-full flex-col border-none p-0 data-[state=active]:flex"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="space-y-1">
+                          <h2 className="text-2xl font-semibold tracking-tight">
+                            Join in the room and enjoy.
+                          </h2>
+                          <p className="text-sm text-muted-foreground">
+                            Get the Streaming ID from friends and enjoy.
+                          </p>
+                        </div>
+                      </div>
+                      <Separator className="my-4" />
+                      <JoinRoom />
                     </TabsContent>
                   </Tabs>
                 </div>

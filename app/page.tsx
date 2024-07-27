@@ -143,7 +143,7 @@ export default function MusicPage() {
                         </div>
                       </div>
                       <Separator className="my-4" />
-                      <StreamMusic/>
+                      <StreamMusic />
                     </TabsContent>
                   </Tabs>
                 </div>
